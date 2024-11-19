@@ -27,14 +27,18 @@
 
 @layer utilities {
   .glass {
-    @apply backdrop-blur-lg bg-white/10 border border-white/20;
+    @apply backdrop-blur-lg bg-white/5 border border-white/10;
   }
   
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary animate-gradient-shift;
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-primary via-purple-400 to-secondary animate-gradient-shift;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-br from-background via-purple-900/20 to-background;
   }
 }
 
 body {
-  @apply bg-background text-white antialiased;
+  @apply bg-gradient-to-br from-background via-purple-900/20 to-background min-h-screen text-white antialiased;
 }
